@@ -4,3 +4,10 @@
 + https://github.com/waltheri/wgo.js
 + https://github.com/jokkebk/jgoboard
 + go-libraries
++ https://github.com/fscheng4747/minesweeper/blob/master/index.html
+
+## Target
+1. Familiar with electron framework
+2. design jungo game
+3. deploy
+4. multiple languages 
