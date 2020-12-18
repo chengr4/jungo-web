@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Minesweeper</title>
-    <script src="jungo.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="grid"></div>
-      <div>Flags left: <span id="flags-left"></span></div>
-      <div id="result"></div>
-    </div>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="wgo/wgo.js"></script> <!-- linking WGo javascript -->
+  <title>Jungo</title>
+</head>
+<body>
+  <!-- Dropdown menu for selecting tool -->
+  <select id="tool" style="display: block; margin-bottom: 10px;">
+    <option value="black" selected>Black stone</option>
+    <option value="white">White stone</option>
+    <option value="SQ">Square</option>
+    <option value="TR">Triangle</option>
+    <option value="CR">Circle</option>
+    <option value="remove">Remove</option>
+  </select>
+  <div id="board">
+    <!-- board will go here -->
+  </div>
+
+  <script type="text/javascript" src="jungo.js"></script>
+</body>
 </html>
