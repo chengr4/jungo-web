@@ -1,14 +1,13 @@
-let amountOfBlack = 0; // 黑棋總數
-let amountOfWhite = 0; //白旗總數
-let currentStep =0; // 第？手
-
+// 棋盤
 let board = new WGo.Board(document.getElementById("board"), {
   width: 500,
   size: 7,
 });
 
+// Game
 var game = new WGo.Game(7);
 
+// 畫座標
 var coordinates = {
     // draw on grid layer
     grid: {
@@ -44,24 +43,28 @@ var coordinates = {
 };
 board.addCustomObject(coordinates);
 
+// 走一手
 board.addEventListener("click", function(x, y) {
-    if(currentStep%2==0) {
+    // one move
+    move = game.play(x, y);
+    if(typeof(move) != 'number') {
         board.addObject({
             x: x,
             y: y,
-            c: WGo.B
+            c: -game.turn
         });
-        currentStep++;
-        game.play(x, y, WGo.B);
-        console.log(game.play());  
-    } else {
-        board.addObject({
-            x: x,
-            y: y,
-            c: WGo.W
-        });
-        currentStep++;  
-        game.play(x,y, WGo.W, false);  
+    } 
+    //console.log(game);
+    //game.getPosition().schema.forEach()
+
+    // remove capture stones
+    for(let m=0;m<7;m++) {
+        for(let n=0;n<7;n++) {
+            if(game.getPosition().get(m, n)==0) {
+                board.removeObjectsAt(m, n);
+            }
+            //console.log(game.getPosition().get(m, n));
+        }
     }
 });
 
