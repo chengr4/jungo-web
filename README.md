@@ -5,24 +5,25 @@
 
 ## 什麼是純棋？
 
-[關於純棋](https://letsjungo.sinkirou.com/)
+非常類似圍棋的遊戲，由日本圍棋棋士[王銘琬九段](https://zh.wikipedia.org/wiki/%E7%8E%8B%E9%8A%98%E7%90%AC)所創。
 
-## 預計使用專案
+### 核心規則
 
-+ https://github.com/waltheri/wgo.js
-+ https://github.com/jokkebk/jgoboard
-+ go-libraries
-+ https://github.com/fscheng4747/minesweeper/blob/master/index.html
-+ [Howler.js](https://howlerjs.com/) 用於聲音
+1. 黑白輪流下在棋盤交叉點
+2. 包圍提取
+3. 子多為勝：棋盤上棋子多的一方獲勝
+4. 停手計分
+
+### 進階規則
+
+唯一的進階規則：[打劫](https://youtu.be/3dMT9kaHYaU)
 
 ## 使用專案
 
-+ https://github.com/waltheri/wgo.js
-+ https://github.com/fscheng4747/minesweeper/blob/master/index.html
++ [wgo.js](https://github.com/waltheri/wgo.js) Go library
 + [Howler.js](https://howlerjs.com/) 用於聲音
 
-## Target
+## Reference
 
-1. design jungo game
-1. deploy maybe
-1. multiple languages
++ [王銘琬：用純棋，10分鐘學會圍棋](https://youtu.be/kJyPoZ6Xmsw)
++ [關於純棋](https://letsjungo.sinkirou.com/)
