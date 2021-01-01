@@ -25,7 +25,7 @@
 
 + [wgo.js](https://github.com/waltheri/wgo.js) Go library
 + [Howler.js](https://howlerjs.com/) 用於聲音
-
++ [Bootstrap v4.5](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 ## Reference
 
 + [王銘琬：用純棋，10分鐘學會圍棋](https://youtu.be/kJyPoZ6Xmsw)
