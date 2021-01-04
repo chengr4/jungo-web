@@ -2,7 +2,7 @@
 
 我深信**純棋**是拯救**圍棋**的其中一支箭，因此有了這個專案。
 
-以取代五子棋為短期目標
+以取代五子棋為短期目標。
 
 `推廣純棋，救救圍棋`
 
@@ -26,6 +26,7 @@
 + [wgo.js](https://github.com/waltheri/wgo.js) Go library
 + [Howler.js](https://howlerjs.com/) 用於聲音
 + [Bootstrap v4.5](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+
 ## Reference
 
 + [王銘琬：用純棋，10分鐘學會圍棋](https://youtu.be/kJyPoZ6Xmsw)
