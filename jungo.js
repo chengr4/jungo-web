@@ -8,7 +8,7 @@ let board = new WGo.Board(document.getElementById("board"), {
 var game = new WGo.Game(7);
 
 var sound = new Howl({
-  src: ["data/move.mp3"],
+  src: ["sound/move.mp3"],
 });
 
 // 畫座標
