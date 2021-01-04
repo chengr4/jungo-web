@@ -9,20 +9,60 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <script type="text/javascript" src="wgo/wgo.min.js"></script>
+    <!-- Libraries -->
     <!-- linking WGo javascript -->
+    <script type="text/javascript" src="wgo/wgo.min.js"></script>
+    <script src="./lib/howler.js"></script>
+    <style>
+      footer {
+        background-color: aqua;
+        margin-top: 1%;
+      }
+    </style>
     <title>Jungo</title>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <a class="navbar-brand" href="#">簡易純棋網站</a>
+      <span class="navbar-text"> -用純棋取代五子棋- </span>
+    </nav>
+
     <div class="container">
-      <h1 class="page-header">純棋 <small class="text-muted">*用純棋取代五子棋*</small></h1>
-
-      <div id="board">
-        <!-- board will go here -->
+      <div class="row">
+        <div class="col-md-8">
+          <div id="board">
+            <!-- board will go here -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info">
+            <button id="pass" class="btn btn-primary">虛手</button>
+            <button id="resign" class="btn btn-primary">投降</button>
+            <label for="show-lead">
+              顯示領先
+              <input type="checkbox" />
+            </label>
+            <table class="table table-condensed table-bordered">
+              <tr>
+                <th>黑方</th>
+                <th>白方</th>
+              </tr>
+              <tr class="table-success">
+                <th>30</th>
+                <th>3</th>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
-
-      <button class="btn btn-primary">虛手</button>
     </div>
+
+    <footer class="footer py-3">
+      <div class="container">
+        <span class="text-muted"><p>Copyright &copy; 2021 Eddie Cheng</p></span>
+      </div>
+    </footer>
 
     <script type="text/javascript" src="jungo.js"></script>
     <script
