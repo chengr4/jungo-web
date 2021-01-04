@@ -8,7 +8,7 @@ let board = new WGo.Board(document.getElementById("board"), {
 var game = new WGo.Game(7);
 
 var sound = new Howl({
-  src: ["sound/move.mp3"]
+  src: ["sound/amove.mp3"]
 });
 
 // 畫座標
@@ -49,15 +49,17 @@ board.addCustomObject(coordinates);
 
 // 走一手
 board.addEventListener("click", function (x, y) {
+
   // one move
   move = game.play(x, y);
   if (typeof move != "number") {
+    sound.play();
     board.addObject({
       x: x,
       y: y,
       c: -game.turn,
     });
-    sound.play();
+    
   }
   //console.log(game);
   //game.getPosition().schema.forEach()
