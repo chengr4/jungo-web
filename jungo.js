@@ -53,7 +53,6 @@ board.addEventListener("click", function (x, y) {
   // one move
   move = game.play(x, y);
   if (typeof move != "number") {
-    sound.play();
     board.addObject({
       x: x,
       y: y,
