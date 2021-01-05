@@ -16,9 +16,18 @@ var game = new WGo.Game(7);
 let numberOfBlack;
 let numberOfWhite;
 
+// sound
+let soundsURL = [
+  "./sound/moveSound.mp3",
+  "sound/capture0.mp3",
+  "sound/pass.mp3",
+];
+let sounds = new Array(soundsURL.length);
 
-const sound = new Howl({
-  src: ["sound/moveSound.mp3"]
+soundsURL.forEach((url, i) => {
+  sounds[i] = new Howl({
+    src: [url],
+  });
 });
 
 // init current step
@@ -28,10 +37,10 @@ let step_template;
 /**
  * show steps
  */
-showSteps = (currentStep) => {
+let showSteps = (currentStep) => {
   step_template = `<p>現在手數： ${currentStep}</p>`;
-  document.querySelector('#current-step').innerHTML = step_template;
-}
+  document.querySelector("#current-step").innerHTML = step_template;
+};
 showSteps(currentStep);
 
 // coordiate
@@ -73,34 +82,32 @@ board.addCustomObject(coordinates);
 /**
  * show numbers of stones
  */
-showStones = (black, white) => {
+let showStones = (black, white) => {
   let numberOfBlack = black;
   let numberOfWhite = white;
-  document.querySelector('#black-stones').innerHTML = numberOfBlack;
-  document.querySelector('#white-stones').innerHTML = numberOfWhite;
-}
+  document.querySelector("#black-stones").innerHTML = numberOfBlack;
+  document.querySelector("#white-stones").innerHTML = numberOfWhite;
+};
 
-
-// move one step
 board.addEventListener("click", function (x, y) {
-
   if (isGameOver) return;
+  if (!game.isValid(x, y)) return;
 
-  move = game.play(x, y);
-  if (typeof move != "number") {
-    gameOverCounter = 0;
-    board.addObject({
-      x: x,
-      y: y,
-      c: -game.turn,
-    });
-    sound.play();
-    currentStep++;
-    showSteps(currentStep);
-  }
+  // move one step
+  game.play(x, y);
+  gameOverCounter = 0;
+  board.addObject({
+    x: x,
+    y: y,
+    c: -game.turn,
+  });
+  sounds[0].play();
+  currentStep++;
+  showSteps(currentStep);
 
-   numberOfBlack = 0;
-   numberOfWhite = 0;
+  // init b and w
+  numberOfBlack = 0;
+  numberOfWhite = 0;
 
   // remove capture stones
   for (let m = 0; m < 7; m++) {
@@ -121,48 +128,51 @@ board.addEventListener("click", function (x, y) {
  * Toggle table
  */
 let toggleTable = () => {
-
   // If the checkbox is checked, display the output text
-  if (checkBox.checked == true){
+  if (checkBox.checked == true) {
     showTable.style.display = "table";
   } else {
     showTable.style.display = "none";
   }
-}
+};
 
 /**
  * pass (虛手)
  */
 let passGame = () => {
   if (isGameOver) return;
-  if (gameOverCounter==1) {
+  sounds[2].play();
+  if (gameOverCounter == 1) {
+    currentStep++;
+    showSteps(currentStep);
     gameOver();
   } else {
-  game.pass();
-  gameOverCounter++;
-  currentStep++;
-  showSteps(currentStep);
+    game.pass();
+    gameOverCounter++;
+    currentStep++;
+    showSteps(currentStep);
   }
-}
+};
 
 /**
  * resign (認輸)
  */
 let resignGame = () => {
   location.reload();
-}
+};
 
+/**
+ * game over (結束遊戲)
+ */
 let gameOver = () => {
   isGameOver = true;
   showTable.style.display = "table";
   checkBox.checked = true;
-  if(numberOfBlack > numberOfWhite) {
-    document.querySelector('#winner').innerHTML = '黑勝';
+  if (numberOfBlack > numberOfWhite) {
+    document.querySelector("#winner").innerHTML = "黑勝";
   } else if (numberOfBlack < numberOfWhite) {
-    document.querySelector('#winner').innerHTML = '白勝';
+    document.querySelector("#winner").innerHTML = "白勝";
   } else {
-    document.querySelector('#winner').innerHTML = '平手';
+    document.querySelector("#winner").innerHTML = "平手";
   }
-  
-}
-  
+};
