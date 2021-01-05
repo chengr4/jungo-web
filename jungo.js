@@ -1,4 +1,4 @@
-// 棋盤
+// Set board
 let board = new WGo.Board(document.getElementById("board"), {
   width: 500,
   size: 7,
@@ -11,7 +11,7 @@ const sound = new Howl({
   src: ["sound/moveSound.mp3"]
 });
 
-// 畫座標
+// coordiate
 var coordinates = {
   // draw on grid layer
   grid: {
@@ -47,10 +47,9 @@ var coordinates = {
 };
 board.addCustomObject(coordinates);
 
-// 走一手
+// move one step
 board.addEventListener("click", function (x, y) {
 
-  // one move
   move = game.play(x, y);
   if (typeof move != "number") {
     board.addObject({
@@ -70,3 +69,20 @@ board.addEventListener("click", function (x, y) {
     }
   }
 });
+
+/**
+ * Toggle table
+ */
+function toggleTable() {
+  // Get the checkbox
+  var checkBox = document.getElementById("myCheck");
+  var showTable = document.getElementById("showTable");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    showTable.style.display = "table";
+  } else {
+    showTable.style.display = "none";
+  }
+  
+}

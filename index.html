@@ -39,11 +39,11 @@
           <div class="info">
             <button id="pass" class="btn btn-primary">虛手</button>
             <button id="resign" class="btn btn-primary">投降</button>
-            <label for="show-lead">
-              顯示領先
-              <input type="checkbox" />
-            </label>
-            <table class="table table-condensed table-bordered">
+            <br>
+            <input type="checkbox" onclick="toggleTable()" id="myCheck"/>
+            <label for="show-lead"></label>顯示領先 </label>
+            <!-- Table -->
+            <table class="table table-condensed table-bordered" id="showTable" style="display:none">
               <tr>
                 <th>黑方</th>
                 <th>白方</th>
@@ -58,12 +58,14 @@
       </div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer py-3">
       <div class="container">
         <span class="text-muted"><p>Copyright &copy; 2021 Eddie Cheng</p></span>
       </div>
     </footer>
 
+    <!-- Script -->
     <script type="text/javascript" src="jungo.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
