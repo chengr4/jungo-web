@@ -31,3 +31,8 @@
 
 + [王銘琬：用純棋，10分鐘學會圍棋](https://youtu.be/kJyPoZ6Xmsw)
 + [關於純棋](https://letsjungo.sinkirou.com/)
+
+## 未完成
+
++ 提子音效
++ 多語言格式
