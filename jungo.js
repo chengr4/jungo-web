@@ -7,8 +7,8 @@ let board = new WGo.Board(document.getElementById("board"), {
 // Game
 var game = new WGo.Game(7);
 
-var sound = new Howl({
-  src: ["./sound/moveSound.mp3"]
+const sound = new Howl({
+  src: ["sound/moveSound.mp3"]
 });
 
 // 畫座標
@@ -58,10 +58,8 @@ board.addEventListener("click", function (x, y) {
       y: y,
       c: -game.turn,
     });
-    
+    sound.play();
   }
-  //console.log(game);
-  //game.getPosition().schema.forEach()
 
   // remove capture stones
   for (let m = 0; m < 7; m++) {
@@ -69,9 +67,6 @@ board.addEventListener("click", function (x, y) {
       if (game.getPosition().get(m, n) == 0) {
         board.removeObjectsAt(m, n);
       }
-      //console.log(game.getPosition().get(m, n));
     }
   }
 });
-
-sound.play("laser");
