@@ -23,7 +23,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-1">
       <a class="navbar-brand" href="#">簡易純棋網站</a>
       <span class="navbar-text"> -用純棋取代五子棋- </span>
     </nav>
@@ -31,17 +31,20 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
+          <div id='current-step'> 
+            <!-- current step -->
+          </div>
           <div id="board">
             <!-- board will go here -->
           </div>
         </div>
         <div class="col-md-4">
           <div class="info">
-            <button id="pass" class="btn btn-primary">虛手</button>
-            <button id="resign" class="btn btn-primary">投降</button>
+            <a id="pass" class="btn btn-primary" onclick="passGame()">虛手</a>
+            <a id="resign" class="btn btn-primary" onclick="resignGame()">投降</a>
             <br>
             <input type="checkbox" onclick="toggleTable()" id="myCheck"/>
-            <label for="show-lead"></label>顯示領先 </label>
+            <label for="show-lead"></label>顯示領先</label>
             <!-- Table -->
             <table class="table table-condensed table-bordered" id="showTable" style="display:none">
               <tr>
@@ -49,10 +52,11 @@
                 <th>白方</th>
               </tr>
               <tr class="table-success">
-                <th>30</th>
-                <th>3</th>
+                <th id="black-stones"></th>
+                <th id="white-stones"></th>
               </tr>
             </table>
+            <p id="winner"></p>
           </div>
         </div>
       </div>
