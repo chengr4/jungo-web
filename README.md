@@ -23,7 +23,7 @@
 
 唯一的進階規則：[打劫](https://youtu.be/3dMT9kaHYaU)
 
-## 使用專案
+## Used Libraries
 
 + [wgo.js](https://github.com/waltheri/wgo.js) Go library
 + [Howler.js](https://howlerjs.com/) 用於聲音
