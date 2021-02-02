@@ -6,6 +6,8 @@
 
 `推廣純棋，救救圍棋`
 
+[In English](./docs/README-EMG.md)
+
 ## 什麼是純棋？
 
 非常類似圍棋的遊戲，由日本圍棋棋士[王銘琬九段](https://zh.wikipedia.org/wiki/%E7%8E%8B%E9%8A%98%E7%90%AC)所創。
