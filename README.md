@@ -6,7 +6,7 @@
 
 `推廣純棋，救救圍棋`
 
-[In English](./docs/README-EMG.md)
+[In English](./docs/README-ENG.md)
 
 ## 什麼是純棋？
 
