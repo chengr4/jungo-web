@@ -83,17 +83,18 @@ board.addCustomObject(coordinates);
  * show numbers of stones
  */
 let showStones = (black, white) => {
+
   let numberOfBlack = black;
   let numberOfWhite = white;
   document.querySelector("#black-stones").innerHTML = numberOfBlack;
   document.querySelector("#white-stones").innerHTML = numberOfWhite;
 };
 
+// move one step
 board.addEventListener("click", function (x, y) {
   if (isGameOver) return;
   if (!game.isValid(x, y)) return;
 
-  // move one step
   game.play(x, y);
   gameOverCounter = 0;
   board.addObject({
@@ -101,15 +102,19 @@ board.addEventListener("click", function (x, y) {
     y: y,
     c: -game.turn,
   });
+
   sounds[0].play();
   currentStep++;
   showSteps(currentStep);
+  removeCapturedStones();
+});
 
-  // init b and w
+let removeCapturedStones = () => {
+
   numberOfBlack = 0;
   numberOfWhite = 0;
 
-  // remove capture stones
+  console.log(game.getPosition());
   for (let m = 0; m < 7; m++) {
     for (let n = 0; n < 7; n++) {
       if (game.getPosition().get(m, n) == 0) {
@@ -122,7 +127,7 @@ board.addEventListener("click", function (x, y) {
     }
   }
   showStones(numberOfBlack, numberOfWhite);
-});
+}
 
 /**
  * Toggle table
