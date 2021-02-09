@@ -1,6 +1,7 @@
 // set board
 let board = new WGo.Board(document.getElementById("board"), {
-  width: 500,
+  width: 700,
+  height: 700,
   size: 7,
 });
 
