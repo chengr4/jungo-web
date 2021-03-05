@@ -40,3 +40,4 @@
 + 應該會轉 react
 + 多語言格式 (i18n)
 + chatroom
++ Web worker
