@@ -29,7 +29,7 @@
 + [Howler.js](https://howlerjs.com/) 用於聲音
 + [Bootstrap v4.5](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
-## Reference
+## References
 
 + [王銘琬：用純棋，10分鐘學會圍棋](https://youtu.be/kJyPoZ6Xmsw)
 + [關於純棋](https://letsjungo.sinkirou.com/)
@@ -37,7 +37,6 @@
 ## 未完成
 
 + 提子音效
-+ 應該會轉 react
 + 多語言格式 (i18n)
 + chatroom
 + Web worker

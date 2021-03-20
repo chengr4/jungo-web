@@ -21,6 +21,6 @@ A game very similar to [Go](https://youtu.be/5PTXdR8hLlQ) with easier rules, cre
 ## Unfinished part
 
 + sound of capturing stones 
-+ use React
 + multiple languages in the website (i18n)
 + chatroom
++ Web worker
