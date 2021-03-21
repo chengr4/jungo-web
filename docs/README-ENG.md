@@ -2,7 +2,7 @@
 
 ## What is Jungo?
 
-A game very similar to [Go](https://youtu.be/5PTXdR8hLlQ) with easier rules, created by professional Go player [Wang Ming-wan](https://en.wikipedia.org/wiki/Wang_Ming-wan).
+A game very similar to [Go](https://youtu.be/5PTXdR8hLlQ) with easier rules, created by professional Go player [Wang Ming-Wan](https://en.wikipedia.org/wiki/Wang_Ming-wan).
 
 ### Rules
 
