@@ -29,6 +29,11 @@
 + [Howler.js](https://howlerjs.com/) 用於聲音
 + [Bootstrap v4.5](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
+## About JS files
+
++ `board.js`: 產生棋盤與座標
++ `jungo.js`: For all events
+
 ## References
 
 + [王銘琬：用純棋，10分鐘學會圍棋](https://youtu.be/kJyPoZ6Xmsw)

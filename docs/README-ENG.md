@@ -18,9 +18,14 @@ A game very similar to [Go](https://youtu.be/5PTXdR8hLlQ) with easier rules, cre
 + [Howler.js](https://howlerjs.com/) for sounds
 + [Bootstrap v4.5](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
+## About JS files
+
++ `board.js`: set the board and coordinates
++ `jungo.js`: For all events
+
 ## Unfinished part
 
-+ sound of capturing stones 
++ sound of capturing stones
 + multiple languages in the website (i18n)
 + chatroom
 + Web worker
