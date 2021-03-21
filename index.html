@@ -9,10 +9,6 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <!-- Libraries -->
-    <script src="lib/howler.js"></script>
-    <!-- linking WGo javascript -->
-    <script type="text/javascript" src="lib/wgo/wgo.min.js"></script>
     <style>
       footer {
         background-color: aqua;
@@ -38,8 +34,7 @@
             <!-- board will go here -->
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="info">
+        <div class="col-md-4 info">
             <a id="pass" class="btn btn-primary" onclick="passGame()">虛手</a>
             <a id="resign" class="btn btn-primary" onclick="resignGame()">投降</a>
             <br>
@@ -57,7 +52,6 @@
               </tr>
             </table>
             <p id="winner"></p>
-          </div>
         </div>
       </div>
     </div>
@@ -70,7 +64,6 @@
     </footer>
 
     <!-- Script -->
-    <script type="text/javascript" src="jungo.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -81,5 +74,13 @@
       integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Libraries -->
+    <script src="lib/howler.js" defer></script>
+    <!-- linking WGo javascript -->
+    <script type="text/javascript" src="lib/wgo/wgo.min.js"></script>
+
+    <script type="text/javascript" src="jungo.js" async></script>
+    <script type="text/javascript" src="board.js" defer></script>
   </body>
 </html>

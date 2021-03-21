@@ -1,19 +1,12 @@
-// set board
-let board = new WGo.Board(document.getElementById("board"), {
-  width: 700,
-  height: 700,
-  size: 7,
-});
-
-var checkBox = document.getElementById("myCheck");
-var showTable = document.getElementById("showTable");
+let checkBox = document.getElementById("myCheck");
+let showTable = document.getElementById("showTable");
 
 // init game over
 let isGameOver = false;
 let gameOverCounter = 0;
 
 // init Game
-var game = new WGo.Game(7);
+let game = new WGo.Game(7);
 let numberOfBlack;
 let numberOfWhite;
 
@@ -33,7 +26,7 @@ soundsURL.forEach((url, i) => {
 
 // init current step
 let currentStep = 0;
-let step_template;
+let step_template = "";
 
 /**
  * show steps
@@ -44,47 +37,10 @@ let showSteps = (currentStep) => {
 };
 showSteps(currentStep);
 
-// coordiate
-var coordinates = {
-  // draw on grid layer
-  grid: {
-    draw: function (args, board) {
-      var ch, t, xright, xleft, ytop, ybottom;
-
-      this.fillStyle = "rgba(0,0,0,0.7)";
-      this.textBaseline = "middle";
-      this.textAlign = "center";
-      this.font = board.stoneRadius + "px " + (board.font || "");
-
-      xright = board.getX(-0.5);
-      xleft = board.getX(board.size - 0.5);
-      ytop = board.getY(-0.5);
-      ybottom = board.getY(board.size - 0.5);
-
-      for (var i = 0; i < board.size; i++) {
-        ch = i + "A".charCodeAt(0);
-        if (ch >= "I".charCodeAt(0)) ch++;
-
-        t = board.getY(i);
-        this.fillText(board.size - i, xright, t);
-        this.fillText(board.size - i, xleft, t);
-
-        t = board.getX(i);
-        this.fillText(String.fromCharCode(ch), t, ytop);
-        this.fillText(String.fromCharCode(ch), t, ybottom);
-      }
-
-      this.fillStyle = "black";
-    },
-  },
-};
-board.addCustomObject(coordinates);
-
 /**
  * show numbers of stones
  */
 let showStones = (black, white) => {
-
   let numberOfBlack = black;
   let numberOfWhite = white;
   document.querySelector("#black-stones").innerHTML = numberOfBlack;
@@ -111,11 +67,9 @@ board.addEventListener("click", function (x, y) {
 });
 
 let removeCapturedStones = () => {
-
   numberOfBlack = 0;
   numberOfWhite = 0;
 
-  console.log(game.getPosition());
   for (let m = 0; m < 7; m++) {
     for (let n = 0; n < 7; n++) {
       if (game.getPosition().get(m, n) == 0) {
@@ -128,7 +82,7 @@ let removeCapturedStones = () => {
     }
   }
   showStones(numberOfBlack, numberOfWhite);
-}
+};
 
 /**
  * Toggle table
