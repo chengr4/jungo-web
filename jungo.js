@@ -89,7 +89,7 @@ let removeCapturedStones = () => {
 /**
  * Toggle table
  */
-let toggleTable = () => {
+window.toggleTable = () => {
   // If the checkbox is checked, display the output text
   if (checkBox.checked == true) {
     showTable.style.display = "table";
