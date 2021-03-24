@@ -11,8 +11,8 @@ let numberOfBlack;
 let numberOfWhite;
 
 // sound
-let soundsURL = [
-  "./sound/moveSound.mp3",
+/*let soundsURL = [
+  "sound/moveSound.mp3",
   "sound/capture0.mp3",
   "sound/pass.mp3",
 ];
@@ -22,7 +22,7 @@ soundsURL.forEach((url, i) => {
   sounds[i] = new Howl({
     src: [url],
   });
-});
+});*/
 
 // init current step
 let currentStep = 0;
