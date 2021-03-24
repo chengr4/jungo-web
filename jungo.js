@@ -1,3 +1,5 @@
+import board from './board.js';
+
 let checkBox = document.getElementById("myCheck");
 let showTable = document.getElementById("showTable");
 
@@ -11,7 +13,7 @@ let numberOfBlack;
 let numberOfWhite;
 
 // sound
-/*let soundsURL = [
+let soundsURL = [
   "sound/moveSound.mp3",
   "sound/capture0.mp3",
   "sound/pass.mp3",
@@ -22,7 +24,7 @@ soundsURL.forEach((url, i) => {
   sounds[i] = new Howl({
     src: [url],
   });
-});*/
+});
 
 // init current step
 let currentStep = 0;
@@ -99,7 +101,7 @@ let toggleTable = () => {
 /**
  * pass (虛手)
  */
-let passGame = () => {
+window.passGame = () => {
   if (isGameOver) return;
   sounds[2].play();
   if (gameOverCounter == 1) {
@@ -117,7 +119,7 @@ let passGame = () => {
 /**
  * resign (認輸)
  */
-let resignGame = () => {
+window.resignGame = () => {
   location.reload();
 };
 

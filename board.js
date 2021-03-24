@@ -40,3 +40,5 @@ var coordinates = {
   },
 };
 board.addCustomObject(coordinates);
+
+export default board;
