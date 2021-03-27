@@ -1,7 +1,16 @@
+let wight = 700;
+let height = 700;
+
+let screenSize = window.innerWidth;
+if (screenSize < 500) {
+  wight = 345;
+  height = 345;
+} 
+
 // set the board
 let board = new WGo.Board(document.getElementById("board"), {
-  width: 700,
-  height: 700,
+  width: wight,
+  height: height,
   size: 7,
 });
 
