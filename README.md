@@ -23,6 +23,25 @@
 
 唯一的進階規則：[打劫](https://youtu.be/3dMT9kaHYaU)
 
+## 如何在 Local 啟用
+
+> 感謝 [@CGLemon](https://github.com/CGLemon)
+
+1. 使用 VSCode extension [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+2. 使用 `npm` package `http-server`
+
+    > 需要下載 nodejs
+
+    ```
+    cd jungo-web
+    npx http-server .
+    ```
+    
+    之後用瀏覽器打開 `http://127.0.0.1:8080` (預設路徑)
+
+若想使用 `python` 請參照這篇：https://stackoverflow.com/a/21608670/18536885
+
+
 ## Used Libraries
 
 + [wgo.js](https://github.com/waltheri/wgo.js) Go library
